@@ -23,7 +23,7 @@ else:
     df = pd.read_csv("Superstore.csv", encoding="ISO-8859-1")
 
 col1, col2 = st.columns((2))
-df["Order Date"] = pd.to_datetime(df["Order Date"], format='%m-%d-%Y')
+df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)
 
 #Getting Min and Max date from the columns
 
