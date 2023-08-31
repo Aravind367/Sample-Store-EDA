@@ -1,4 +1,4 @@
 Streamlit
+matplotlib
 plotly
 xlrd
-matplotlib
