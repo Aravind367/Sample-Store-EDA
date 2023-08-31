@@ -5,6 +5,7 @@ import pandas as pd
 import xlrd
 import os
 import warnings
+from datetime import datetime
 warnings.filterwarnings('ignore')
 
 st.set_page_config(page_title="Megastore!", page_icon=":bar_chart",layout="wide")
@@ -22,7 +23,7 @@ else:
     df = pd.read_csv("Superstore.csv", encoding="ISO-8859-1")
 
 col1, col2 = st.columns((2))
-df["Order Date"] = pd.to_datetime(df["Order Date"])
+df["Order Date"] = pd.to_datetime(df["Order Date"], format='%m-%d-%Y')
 
 #Getting Min and Max date from the columns
 
